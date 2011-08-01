@@ -232,7 +232,7 @@ class RequestFactory(object):
              **extra):
         "Construct a POST request."
 
-        if content_type is MULTIPART_CONTENT:
+        if content_type == MULTIPART_CONTENT:
             post_data = encode_multipart(BOUNDARY, data)
         else:
             # Encode the content so that the byte representation is correct.
